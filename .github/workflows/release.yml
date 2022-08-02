@@ -13,19 +13,13 @@ jobs:
     strategy:
       matrix:
         node-version: [16.x]
-        runtime: [ linux-x64, linux-arm64, win-x64, osx-x64 ]
+        runtime: [ osx-arm64, osx-x64 ]
         include:
-        - runtime: linux-x64
-          os: ubuntu-latest
-
-        - runtime: linux-arm64
-          os: ubuntu-latest
+        - runtime: osx-arm64
+          os: macOS-latest
 
         - runtime: osx-x64
           os: macOS-latest
-
-        - runtime: win-x64
-          os: windows-latest
 
     runs-on: ${{ matrix.os }}
 
