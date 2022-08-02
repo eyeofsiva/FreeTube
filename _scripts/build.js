@@ -11,7 +11,8 @@ const platform = os.platform()
 const cpus = os.cpus()
 
 if (platform === 'darwin') {
-  let arch = Arch.x64
+  let arch = Arch.arm64
+  //changed from x64
 
 // Macbook Air 2020 with M1 = 'Apple M1'
   // Macbook Pro 2021 with M1 Pro = 'Apple M1 Pro'
